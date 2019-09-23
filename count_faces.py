@@ -5,7 +5,7 @@ Entry point - count_faces_from_weblink
 import requests
 
 from api.FaceDetect import face_detect_cv3
-
+from utils import clean_up
 
 IMAGE_PATH = './images'
 
@@ -27,7 +27,7 @@ def count_faces(image_path):
 
 def delete_images():
     """ Deleting images after usage - used for cleanup """
-    # TODO: remove resources
+    clean_up.delete_folder_content(IMAGE_PATH)
 
 
 def count_faces_from_weblink(image_link, title='random_img'):
