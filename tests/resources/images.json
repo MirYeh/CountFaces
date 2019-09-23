@@ -1,0 +1,10 @@
+[
+  {
+    "image": "resources/expected_4.png",
+    "faces": "4"
+  },
+  {
+    "image": "resources/expected_6.jpg",
+    "faces": "6"
+  }
+]
