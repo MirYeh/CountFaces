@@ -9,7 +9,7 @@ class CountFacesTest(unittest.TestCase):
     IMAGE_URL = 'https://peopledotcom.files.wordpress.com/2018/12/books-8.jpg?crop=0px%2C13px%2C2700px%2C1419px&resize=1200%2C630'
     IMAGES_RESOURCE_PATH = './resources/images.json'
 
-    def tßst_download_image(self):
+    def test_download_image(self):
         link = self.IMAGE_URL
         image_path = count_faces.download_image(link, title='test_img')
         self.assertTrue(os.path.exists(image_path))
