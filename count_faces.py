@@ -5,7 +5,7 @@ Entry point - count_faces_from_weblink
 import requests
 
 from api.face_detect import face_detect_cv3
-from utils import clean_up
+from utils import clean_up, os
 
 IMAGE_PATH = './images'
 
@@ -15,8 +15,7 @@ def download_image(image_link, title='random_img'):
     response = requests.get(image_link)
     img_bytes = response.content
     image_path = f'{IMAGE_PATH}/{title}.jpg'
-    with open(image_path, 'wb') as f:
-        f.write(img_bytes)
+    os.save(image_path, img_bytes)
     return image_path
 
 
