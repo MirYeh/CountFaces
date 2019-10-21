@@ -4,7 +4,7 @@ Entry point - count_faces_from_weblink
 """
 import requests
 
-from api.FaceDetect import face_detect_cv3
+from api.face_detect import face_detect_cv3
 from utils import clean_up
 
 IMAGE_PATH = './images'
